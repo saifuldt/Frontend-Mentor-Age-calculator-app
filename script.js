@@ -43,7 +43,7 @@ submitBtn.addEventListener('click', (event) => {
         resultMonths.innerText = '--';
         resultDays.innerText = '--';
         return;
-    } else if (month.value < 0 || day.value < 0 || year.value < 0) {
+    } else if (month.value <= 0 || day.value <= 0 || year.value <= 0) {
         errorMsg.classList.remove('hide');
         errorMsg.innerText = 'Invalid date entered.';
         resultYears.innerText = '--';

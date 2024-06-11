@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+
+</head>
+
+<body>
+
+  <main class="container bg-[--Off-white] flex justify-center items-center max-w-[100%] h-[800px]">
+    <div class="sub-container flex flex-col justify-center items-start p-4 w-[380px] md:w-[600px] md:h-[80%] h-[500px] rounded-tr-3xl rounded-tl-3xl md:rounded-br-[250px] rounded-br-[150px] rounded-bl-3xl bg-[--White]">
+      <form class="">
+        <div class="forms uppercase  w-[95%] h-[100px] flex justify-center md:justify-start items-center gap-4 ">
+          <div class="days flex flex-col ">
+            <label class="text-[14px] text-[--Smokey-grey] font-[400]" for="day">Day</label>
+            <input
+              class="hover:cursor-pointer hover:border-[--Purple] font-[600]  md:text-3xl text-xl border-2 pl-2 rounded-md md:w-[100px]  w-[80px] h-[50px]"
+              type="number" placeholder="DD" name="day" id="day">
+          </div>
+          <div class="months flex flex-col">
+            <label class="text-[14px] text-[--Smokey-grey] font-[400]" for="month">Month</label>
+            <input
+              class="font-[600] hover:cursor-pointer text-xl md:text-3xl border-2 hover:border-[--Purple] pl-2 rounded-md  w-[80px] md:w-[100px] h-[50px]"
+              type="number" placeholder="MM" name="month" id="month">
+          </div>
+          <div class="years flex flex-col">
+            <label class="text-[14px] text-[--Smokey-grey] font-[400]" for="year">Year</label>
+            <input
+              class="font-[600] hover:cursor-pointer hover:border-[--Purple]  text-xl md:text-3xl border-2 pl-2 rounded-md  w-[90px] md:w-[110px] h-[50px]"
+              type="number" placeholder="YYYY" name="year" id="year">
+          </div>
+        </div>
+        <p id="errorMsg" class="hide error italic ml-[25px] md:ml-[0]">Must be a valid date</p>
+        <div class="btn w-[350px] md:w-[500px] flex justify-start items-center ">
+          <div class="singlr-border w-[100%] h-[2px] bg-[--Light-grey]"></div>
+          <button id="submitBtn" class="btn w-[60px] ml-[-200px] md:ml-[0] p-4 rounded-full bg-[--Purple] hover:bg-[--Off-black]"> <img
+              src="./assets/images/icon-arrow.svg" alt="img"></button>
+        </div>
+      </form>
+
+      <div class="result flex flex-col justify-start items-start">
+        <h1 class="text-[50px] md:text-[70px] text-[--Off-black] italic font-[700]"> <span id="resultYears"
+            class="text-[--Purple]">--</span> years</h1>
+        <h1 class="text-[50px] md:text-[70px] text-[--Off-black] italic font-[700]"> <span id="resultMonths"
+            class="text-[--Purple]">--</span> months
+        </h1>
+        <h1 class="text-[50px] md:text-[70px] text-[--Off-black] italic font-[700]"> <span id="resultDays"
+            class="text-[--Purple]">--</span> days</h1>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
